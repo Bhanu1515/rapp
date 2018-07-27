@@ -1,0 +1,8 @@
+.card{
+    width:48%;margin:1%;min-height: 20rem;float: left;
+}
+.cover-photo-img{
+    float: right;
+    width: 40%;
+    margin:0 0 0 2rem;
+}
