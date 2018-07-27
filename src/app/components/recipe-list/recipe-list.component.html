@@ -2,3 +2,33 @@
 
 <recipe-summary *ngFor='let recipe of recipes' [recipe]='recipe'>
 </recipe-summary>
+<div style="clear: both"></div>
+<div class="card" style="max-width: 700px;">
+    <div class="card-header">
+        Add New Recipe
+    </div>
+    <div class="card-body">
+        <form action="/action_page.php">
+            <div class="form-group">
+                <input type="text" [(ngModel)]='recipe_in_progress.title' class="form-control" placeholder="Recipe Title" name='title'>
+            </div>
+            <div class="form-group">
+                <textarea type="text" [(ngModel)]='recipe_in_progress.description' class="form-control" placeholder="Description" name='Description'></textarea>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" [(ngModel)]='recipe_in_progress.feeds_this_many' class="form-control" placeholder="Feeds this many" name='Feeds_this_many'>
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">People</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                    <input type="text" [(ngModel)]='recipe_in_progress.preparation_time' class="form-control" placeholder="Preparation Time" name='preparation_time'>
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">Minutes</span>
+                    </div>
+                </div>
+                
+            <button type="submit" class="btn btn-primary" (click)='addRecipeClicked()'>Add Recipe</button>
+        </form>
+    </div>
+</div>
